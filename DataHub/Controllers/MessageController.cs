@@ -22,6 +22,8 @@ namespace DataHub.Controllers
             //this.messsagesRepository = messsagesRepository;
         }
 
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public virtual async Task<IActionResult> Get([FromRoute]string id)
         {
@@ -57,6 +59,9 @@ namespace DataHub.Controllers
         //    return Ok(messageInfo);
         //}
 
+        /// <summary>
+        /// Saves a message according to the entity
+        /// </summary>
         /// <param name="messageRequest"></param>
         /// <returns>A newly created Data point</returns>
         /// <response code="201">Returns the newly created item</response>
