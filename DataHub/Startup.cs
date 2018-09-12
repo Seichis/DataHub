@@ -64,7 +64,7 @@ namespace DataHub
                     {
                         Name = "HT/KM",
                         Email = string.Empty,
-                        
+
                     },
                     License = new License
                     {
@@ -75,6 +75,7 @@ namespace DataHub
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddJsonOptions(options =>
             {
                 options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
